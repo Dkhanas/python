@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block title %} Shop list{% endblock %}
+{% block content %}
+    <ul>
+    {% for shop in shops %}
+     <a href="{% url 'shops_detail' shop.id %}">    <li>{{ shop }}</li></a>
+    {% endfor %}
+    </ul>
+{% endblock %}

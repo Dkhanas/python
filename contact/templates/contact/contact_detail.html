@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block title %} Detail contact:{{ detail.pk }}{% endblock %}
+{% block content %}
+     <p>{{ detail}}</p>
+     <p>{{ sex }}</p>
+     <p>{{ detail.birthday}}</p>
+     <p>{{ detail.email }}</p>
+{% endblock %}

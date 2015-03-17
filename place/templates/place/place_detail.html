@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+
+{% block title %} Detail place:{{ city_detail.pk }}{% endblock %}
+{% block content %}
+    <p>{{ city_detail }}</p>
+    <p>{{ city_detail.country }}</p>
+
+{% endblock %}

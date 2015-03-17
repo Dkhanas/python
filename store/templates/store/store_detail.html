@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block title %} Detail store:{{ store_detail.pk }}{% endblock %}
+{% block content %}
+    <p>{{ store_detail }}</p>
+    <p>{{ store_detail.sitys }}</p>
+    <p>{{ store_detail.adress }}</p>
+
+{% endblock %}

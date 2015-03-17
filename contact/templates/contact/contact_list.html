@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block title %} Contact list{% endblock %}
+{% block content %}
+
+    <ul>
+    {% for contact in contacts %}
+     <a href="{% url 'contact_detail' contact.id %}">    <li>{{ contact.first_name }} {{ contact.second_name }}</li></a>
+    {% endfor %}
+    </ul>
+{% endblock %}

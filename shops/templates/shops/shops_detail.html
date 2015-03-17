@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %} Detail shop:{{ shops_detail.pk }}{% endblock %}
+{% block content %}
+    <p>{{ shops_detail }}</p>
+    <p>{{ shops_detail.type_shop }}</p>
+    <p>{{ shops_detail.owner }}</p>
+    <p>{% for seller in shops_detail.sellers.all %}
+           {{ seller }}
+           {% if not forloop.last %}, {% endif %}
+       {% endfor %}</p>
+    <p>{% for store in shops_detail.store.all %}
+           {{ store }}
+           {% if not forloop.last %}, {% endif %}
+       {% endfor %}</p>
+    <p>{{ shops_detail.city }}</p>
+    <p>{{ shops_detail.adress }}</p>
+    <p>{{ shops_detail.site }}</p>
+{% endblock %}

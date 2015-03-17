@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block title %}Main{% endblock %}
+{% block content %}
+
+    <ul>
+     {% for mod in modeget %}
+    <a href="{% url 'models' mod%}" > <li> {{ mod }}</li></a>
+    {% endfor %}
+    </ul>
+{% endblock %}
